@@ -53,6 +53,6 @@ if __name__ == "__main__":
 	num_stack.pop()
 
 	# isEmpty stack
-	print("T / F: ", num_stack.isEmpty())
+	print("T / F: ", num_stack.isEmpty()) 
 	
 	

@@ -86,7 +86,6 @@ if __name__ == "__main__":
 	num_list.print_node_before()
 	num_list.print_node_after()
 	
-	# 노드 삭제
 	num_list.delete_node_before()
 	num_list.print_node_before()
 	num_list.delete_node_after()

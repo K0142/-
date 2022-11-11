@@ -24,4 +24,4 @@ num_list = [0.88, 0.07, 0.39, 0.46, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68]
 print(num_list)
 
 bucket_list = bucket_sort(num_list)
-print(bucket_list)
+print(bucket_list) 

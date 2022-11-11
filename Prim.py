@@ -20,7 +20,7 @@ def mst_prim(vertex, adj):
 	for i in range(vertex_size):
 		min_v = find_min_vertex(dist, selected)
 		selected[min_v] = True
-		print(vertice[min_v], end = ' ')
+		print(vertex[min_v], end = ' ')
 
 		for v in range(vertex_size):
 			if adj[min_v][v] != None:

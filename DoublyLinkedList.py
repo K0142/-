@@ -23,6 +23,7 @@ class DoublyLinkedList:
 				print(link.data, '<->', end = ' ')
 				link = link.next
 			print("\n")
+			
 	def print_node_after(self):
 		if self.tail == None:
 			print("저장된 데이터가 없습니다.")

@@ -12,7 +12,6 @@ class Stack:
 			print("데이터가 없습니다.")
 		else:
 			 pop_data = self.stack.pop()
-		
 		return pop_data
 
 	# 마지막에 삽입한 데이터를 삭제하지 않고 return

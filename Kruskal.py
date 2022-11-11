@@ -2,35 +2,35 @@ parent = dict()
 rank = dict()
 
 # 초기화 함수
-def make_reset(vertex):
-	parent[vertex] = vertex
-	rank[vertex] = 0
+def make_reset(vertice):
+	parent[vertice] = vertice
+	rank[vertice] = 0
 
 # 최상위 정점 찾는 함수
-def find_root(vertex):
-	if parent[vertex] != vertex:
-		parent[vertex] = find_root(parent[vertex])
-	return parent[vertex]
+def find_root(vertice):
+	if parent[vertice] != vertice:
+		parent[vertice] = find_root(parent[vertice])
+	return parent[vertice]
 
 # 두 개의 정점을 연결하는 함수
-def union_node(vertex1, vertex2):
-	vertex1 = find_root(vertex1)
-	vertex2 = find_root(vertex2)
+def union_node(vertice1, vertice2):
+	node1 = find_root(vertice1)
+	node2 = find_root(vertice2)
 
-	if vertex1 != vertex2:
-		if rank[vertex1] > rank[vertex2]:
-			parent[vertex2] = vertex1
+	if node1 != node2:
+		if rank[node1] > rank[node2]:
+			parent[node2] = node1
 		else:
-			parent[vertex1] = vertex2
-			if rank[vertex1] == rank[vertex2]:
-				rank[vertex2] +=1
+			parent[node1] = node2
+			if rank[node1] == rank[node2]:
+				rank[node2] +=1
 
 # Kruskal 
 def mst_kruskal(graph):
 	min_spanning_tree = []
 
 	# 초기화
-	for v in graph['vertex']:
+	for v in graph['vertices']:
 		make_reset(v)
 
 	# 간선 weight sorting
@@ -39,15 +39,15 @@ def mst_kruskal(graph):
 
 	# 간선 연결 (사이클 없도록)
 	for edge in edges:
-		weight, vertex1, vertex2 = edge
-		if find_root(vertex1) != find_root(vertex2):
-			union_node(vertex1, vertex2)
+		weight, vertice1, vertice2 = edge
+		if find_root(vertice1) != find_root(vertice2):
+			union_node(vertice1, vertice2)
 			min_spanning_tree.append(edge)
 			print(min_spanning_tree)
 	return min_spanning_tree
 
 graph = {
-    'vertex': ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+    'vertices': ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
     'edges': [
         (7, 'A', 'B'),
         (5, 'A', 'D'),

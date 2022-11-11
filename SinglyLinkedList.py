@@ -64,4 +64,4 @@ if __name__ == "__main__":
 	
 	num_list.delete_node()
 	num_list.delete_node()
-	num_list.print_node()
+	num_list.print_node() 

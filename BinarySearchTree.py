@@ -100,6 +100,19 @@ class BinarySearchTree:
 				print(root.data, end = ' ')
 		_dfs_postorder_traversal(self.root)
 
+	# 너비 우선 탐색
+	def bfs(self):
+		def _bfs(root):
+			queue = [root]
+			while queue:
+				root = queue.pop(0)
+				if root is not None:
+					print(root.data, end = ' ')
+					if root.left:
+						queue.append(root.left)
+					if root.right:
+						queue.append(root.right)
+		_bfs(self.root)
 if __name__ == "__main__":
 	array = [40, 4, 34, 35, 14, 55, 48, 13, 15, 49, 47]
 	num_tree = BinarySearchTree()
@@ -113,6 +126,8 @@ if __name__ == "__main__":
 	num_tree.dfs_inorder_traversal()
 	print("\n<후위 순회>")
 	num_tree.dfs_postorder_traversal()
+	print("\n<너비 우선 탐색>")
+	num_tree.bfs()
 	print("\n")
 
 	# search data

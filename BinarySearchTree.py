@@ -23,7 +23,6 @@ class BinarySearchTree:
 				node.left = self._insert_data(node.left, data)
 			else:
 				node.right = self._insert_data(node.right, data)
-
 		return node
 	
 	# 이진 트리에 데이터를 탐색하는 함수 => 재귀 이용
@@ -46,7 +45,6 @@ class BinarySearchTree:
 	def _delete_data(self, node, key):
 		if node is None:
 			return node, False
-
 		deleted = False
 		if key == node.data:
 			deleted = True
@@ -67,7 +65,6 @@ class BinarySearchTree:
 			node.left, deleted = self._delete_data(node.left, key)
 		else: 
 			node.right, deleted = self._delete_data(node.right, key)
-	
 		return node, deleted
 
 	#깊이 우선 탐색을 이용한 전위 순회
@@ -106,7 +103,6 @@ class BinarySearchTree:
 if __name__ == "__main__":
 	array = [40, 4, 34, 35, 14, 55, 48, 13, 15, 49, 47]
 	num_tree = BinarySearchTree()
-	
 	for x in array:
 		num_tree.insert(x)
 	
@@ -130,4 +126,3 @@ if __name__ == "__main__":
 	print(num_tree.delete(48))
 	print(num_tree.delete(4))
 	print()
-

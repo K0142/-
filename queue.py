@@ -13,7 +13,6 @@ class Queue:
 		else:
 			dequeue_data = self.queue[0]
 			self.queue = self.queue[1:]
-	
 		return dequeue_data
 
 	# 데이터를 꺼내지 않고 어떤 값인지 return
@@ -23,7 +22,6 @@ class Queue:
 			print("데이터가 없습니다.")
 		else:
 			peek_data = self.queue[0]
-
 		return peek_data
 
 	def isEmpty(self):

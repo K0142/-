@@ -1,5 +1,6 @@
 # Singly linked list 클래스 선언
 class SinglyLinkedList:
+	
 	# Node 클래스 선언
 	class Node:
 		def __init__ (self, data, next = None):

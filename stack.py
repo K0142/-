@@ -22,7 +22,6 @@ class Stack:
 			print("데이터가 없습니다.")
 		else:	
 			top_data = self.stack[-1]
-		
 		return top_data
 
 	# 스택이 비어있는지 확인하는 메소드
@@ -30,7 +29,6 @@ class Stack:
 		is_empty = False
 		if len(self.stack) == 0:
 			is_empty = True
-		
 		return is_empty
 
 if __name__ == "__main__":

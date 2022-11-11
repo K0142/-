@@ -113,6 +113,7 @@ class BinarySearchTree:
 					if root.right:
 						queue.append(root.right)
 		_bfs(self.root)
+		
 if __name__ == "__main__":
 	array = [40, 4, 34, 35, 14, 55, 48, 13, 15, 49, 47]
 	num_tree = BinarySearchTree()

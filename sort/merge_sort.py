@@ -16,6 +16,7 @@ def merge_sort(array):
 			array[k] = high_array[h]
 			h += 1
 		k += 1
+
 	while l < len(low_array):
 		array[k] = low_array[l]
 		l += 1
